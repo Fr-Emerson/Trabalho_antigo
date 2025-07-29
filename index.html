@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <style>
+        *{
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+.principal-div{
+    background-image: linear-gradient(120deg, #4764d0,#0cd485);
+    background-color: #2d64ac;
+    background-attachment:fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    margin: 0;
+    height: 100vh;
+}   
+#area-texto{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4px;
+    text-align: center;
+    padding: 10px;
+}
+main > .texto{
+    margin-left: 40px;
+}
+
+main{
+    display: flex;
+    width: 97vw;
+    flex-direction: column;
+}
+
+.texto{
+    margin: 15px;
+    height: 600px;
+    color: white;
+}
+.texto p{text-align: justify;}
+.texto h2{ text-align: center;}
+/*Menu lateral*/
+nav.menu-lateral{
+    top: 0;
+    left: 0;
+    padding: 40px 0px 40px 1%;
+    border-right: 2px solid #094342;
+    width: 150px;
+    height: 92%;
+    background-color: transparent;
+    overflow: hidden;
+    transition: 500ms;
+
+}
+.expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+.expandir > i{
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+nav.menu-lateral.expandido{
+    width: 400px; 
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 60p;
+}
+.txt-link{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 90px;
+    transition: 700ms;
+    opacity: 0;
+}
+nav.menu-lateral.expandido .txt-link{
+margin-left: 30px;
+opacity: 1;
+}
+ul li.item-menu a .icon> i{
+    font-size: 35px;
+}
+ul li.item-menu{
+    transition: 400ms;
+}
+ul li.ativo{
+background-color: #094342;
+}
+ul li.item-menu:hover{
+    background-color: #094342;
+}
+/*Tela de doação*/
+#principal{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#area-doar{
+    width: 550px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    
+    flex-direction: column;
+    height: 600px;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.527);
+}
+form label{
+    margin-left: 15px;
+}
+form .ipt-texto{
+    height: 30px;
+    width: 500px;
+    outline: none;
+    border: 1px;
+    border-radius: 7px;
+    margin: 15px;
+}
+form #btn{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: #00585b;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+#btn:hover{
+    background-color: #047b7d;
+}
+.doar-txt{
+    text-align: center;
+}
+#justificativa{
+    height: 150px;
+}
+/*Vendas*/
+#area-vendas{
+    height: 100vh;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+}
+.item-venda{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+
+    height:150px ;
+    width: 500px ;
+    background-color: darkcyan;
+    border-radius:15px ;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
+}
+.btn-venda{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: lightcoral;
+    outline: none;
+    border: none;
+}
+.btn-venda:hover{
+    background-color: rgb(253, 183, 156);
+}
+/*Serviços*/
+#services{
+    height: 100vh;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#area-servicos{
+    width: 550px;
+    height: 600px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
+    background-color: darkcyan; 
+}
+#area-servicos > form > input{
+    margin: 20px;
+}
+.rodape{
+    height: 10vh;
+    width:98.792vw;
+    background: rgb(0, 90, 90);
+    border-top: 2px solid black;
+    text-align: center;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+    </style>
+</head>
+<body onload="init()">
+
+    <div class="principal-div">
+
+        <nav class="menu-lateral">
+            <div class="expandir">
+                <i class="bi bi-list-ul" id="lista"></i>
+            </div>
+            <ul>
+                <li onclick="sobre()" class="item-menu ativo">
+                    <a onclick="init()" href="#">
+                        <span class ="icon"><i class="bi bi-person-fill"></i></i></span>
+                        <span class="txt-link">Sobre</span>
+                    </a>  
+                </li>
+                <li class="item-menu">
+                    <a onclick="vendas()" href="#">
+                        <span class ="icon"><i class="bi bi-cash-stack"></i></span>
+                        <span class="txt-link">Vendas</span>
+                    </a>
+                    
+                </li>
+                <li onclick="doa()" class="item-menu">
+                    <a  href="#">
+                        <span class ="icon"><i class="bi bi-heart-fill"></i></span>
+                        <span class="txt-link">Doações</span>
+                    </a>
+                    
+                </li>
+                <li class="item-menu">
+                    <a onclick="Services()" href="#">
+                        <span class ="icon"><i class="bi bi-plus-circle-fill"></i></span>
+                        <span class="txt-link">Serviços</span>
+                    </a>
+                    
+                    
+                </li>
+                <li class="item-menu">
+                    <a href="https://github.com/Fr-Emerson" target="_blank">
+                        <span class ="icon"><i class="bi bi-github"></i></span>
+                        <span class="txt-link">Dev</span>
+                    </a>
+                    </li>
+            </ul>
+        </nav>
+        <main id="principal" >
+            <section id="area-texto" >
+                <div class="titulo">
+                    <br>
+                    <h1>PET SHOP</h1>
+                    <h2 >Fazendo o melhor para o seu pet desde 1990</h2>
+                </div>
+                <div class="texto">
+                    <h2 id="titulo">Sobre a empresa</h2>
+                    <P id="txt"></P>
+                </div>
+            </section>
+            <section style="display: none;" id="area-doar">
+                    <div class="doar-txt">
+                        <h2>Ficha de inscrição</h2>
+                        <p>Preencha suas informações para a doação de um cachorro</p>
+                    </div>
+                    <form method="get">
+                        <input autocomplete="off" type="text" name="nome" class="ipt-texto" placeholder="Nome">
+                        <input autocomplete="off"  id="dt-nasc" type="date" name="" class="ipt-texto">
+                        <input autocomplete="off" type="email" name="e-mail"  placeholder="Email" class="ipt-texto">
+                        <input autocomplete="off" type="text" name="Endereco" class="ipt-texto" placeholder="Endereço">
+                        <input  autocomplete="off" type="text" placeholder="Escreva a sua justificativa para adotar um pet." id="justificativa" class="ipt-texto">
+                    
+                        <input  onclick="alert('Registrado com sucesso')" id="btn" type="submit" value="PRONTO">
+                    </form>
+            </section>
+            <section style="display: none;" id="area-vendas">
+                <div class="item-venda">
+                    <h2>Ração</h2>
+                    <p>&dollar;167,37</p>
+                    <input class="btn-venda" type="button" value="Comprar" onclick="alert('Comprado com sucesso')">
+                </div>
+                <div class="item-venda">
+                    <h2>Brinquedo</h2>
+                    <p>&dollar;39,97</p>
+                    <input class="btn-venda" type="button" value="Comprar" onclick="alert('Comprado com sucesso')">
+                </div>
+                <div class="item-venda">
+                    <h2>Kit limpeza de pet</h2>
+                    <p>&dollar;197,39</p>
+                    <input class="btn-venda" type="button" value="Comprar" onclick="alert('Comprado com sucesso')">
+                </div>
+                
+            </section>
+            <section id="services" style="display: none;">
+                <div id="area-servicos">
+                    <h2 style="text-align: center;">Agende nossos serviços</h2>
+                    <form method="get">
+                        <input autocomplete="off" type="text" name="nome" class="ipt-texto" placeholder="Nome">
+                        <label for="dt-serv">Data do serviço</label>
+                        <input autocomplete="off"  id="dt-serv" type="date" name="" class="ipt-texto">
+                        <input autocomplete="off" type="email" name="e-mail"  placeholder="Email" class="ipt-texto">
+                        <input autocomplete="off" type="text" name="Endereco" class="ipt-texto" placeholder="Endereço">
+                        <h2>Selecione o(s) serviço(s) que usará</h2>
+                        <label for="banho"><input type="checkbox" name="banho">Banho</label>
+                        <label for="banho"><input type="checkbox" name="tosa">Tosa</label>
+                        <label for="banho"><input type="checkbox" name="passeio">Passeio</label>
+                        <input  onclick="alert('Registrado com sucesso')" id="btn" type="submit" value="Registar">
+                    </form>
+                </div>
+            </section> 
+        </main>
+
+    </div>
+    <footer class="rodape">
+        <p>Todos os direitos reservados &copy; 2023</p>
+    </footer>    
+    <script src="script.js"></script>
+</body>
+</html>

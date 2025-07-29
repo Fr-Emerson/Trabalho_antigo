@@ -1,0 +1,228 @@
+*{
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+.principal-div{
+    background-image: linear-gradient(120deg, #4764d0,#0cd485);
+    background-color: #2d64ac;
+    background-attachment:fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    margin: 0;
+    height: 100vh;
+}   
+#area-texto{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4px;
+    text-align: center;
+    padding: 10px;
+}
+main > .texto{
+    margin-left: 40px;
+}
+
+main{
+    display: flex;
+    width: 97vw;
+    flex-direction: column;
+}
+
+.texto{
+    margin: 15px;
+    height: 600px;
+    color: white;
+}
+.texto p{text-align: justify;}
+.texto h2{ text-align: center;}
+/*Menu lateral*/
+nav.menu-lateral{
+    top: 0;
+    left: 0;
+    padding: 40px 0px 40px 1%;
+    border-right: 2px solid #094342;
+    width: 150px;
+    height: 92%;
+    background-color: transparent;
+    overflow: hidden;
+    transition: 500ms;
+
+}
+.expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+.expandir > i{
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+nav.menu-lateral.expandido{
+    width: 400px; 
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 60p;
+}
+.txt-link{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 90px;
+    transition: 700ms;
+    opacity: 0;
+}
+nav.menu-lateral.expandido .txt-link{
+margin-left: 30px;
+opacity: 1;
+}
+ul li.item-menu a .icon> i{
+    font-size: 35px;
+}
+ul li.item-menu{
+    transition: 400ms;
+}
+ul li.ativo{
+background-color: #094342;
+}
+ul li.item-menu:hover{
+    background-color: #094342;
+}
+/*Tela de doação*/
+#principal{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#area-doar{
+    width: 550px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    
+    flex-direction: column;
+    height: 600px;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.527);
+}
+form label{
+    margin-left: 15px;
+}
+form .ipt-texto{
+    height: 30px;
+    width: 500px;
+    outline: none;
+    border: 1px;
+    border-radius: 7px;
+    margin: 15px;
+}
+form #btn{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: #00585b;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+#btn:hover{
+    background-color: #047b7d;
+}
+.doar-txt{
+    text-align: center;
+}
+#justificativa{
+    height: 150px;
+}
+/*Vendas*/
+#area-vendas{
+    height: 100vh;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+}
+.item-venda{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+
+    height:150px ;
+    width: 500px ;
+    background-color: darkcyan;
+    border-radius:15px ;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
+}
+.btn-venda{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: lightcoral;
+    outline: none;
+    border: none;
+}
+.btn-venda:hover{
+    background-color: rgb(253, 183, 156);
+}
+/*Serviços*/
+#services{
+    height: 100vh;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#area-servicos{
+    width: 550px;
+    height: 600px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.49);
+    background-color: darkcyan; 
+}
+#area-servicos > form > input{
+    margin: 20px;
+}
+.rodape{
+    height: 10vh;
+    width:98.792vw;
+    background: rgb(0, 90, 90);
+    border-top: 2px solid black;
+    text-align: center;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
